@@ -9,7 +9,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/Garage-logo.svg" />
       </Head>
-      <p>Garage ISEP Website </p>
+      <h1 className="text-4xl font-bold">Garage ISEP Website </h1>
     </>
   )
 }
