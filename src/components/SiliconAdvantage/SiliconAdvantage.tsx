@@ -15,7 +15,7 @@ export const SiliconAdvantage: FC<Props> = ({
   alt,
 }) => {
   return (
-    <div className="sm:flex flex-row w-10/12 sm:w-4/5 xl:w-1/2 mb-20">
+    <div className="sm:flex flex-row w-10/12 sm:w-4/5 lg:w-3/5 xl:w-1/2 2xl:w-2/5 mb-20">
       <div className=" basis-3/12 ">
         <div className="flex justify-center sm:justify-start">
           <div>

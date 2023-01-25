@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
 export default function Home() {
   return (
@@ -9,5 +9,5 @@ export default function Home() {
       </Head>
       <h1 className="text-4xl font-bold">Garage ISEP Website </h1>
     </>
-  )
+  );
 }
