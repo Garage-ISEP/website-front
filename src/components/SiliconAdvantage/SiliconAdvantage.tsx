@@ -1,11 +1,11 @@
-import Image from 'next/image'
-import { FC } from 'react'
+import Image from 'next/image';
+import { FC } from 'react';
 
 interface Props {
-  name: string
-  description: string
-  icon: string
-  alt: string
+  name: string;
+  description: string;
+  icon: string;
+  alt: string;
 }
 
 export const SiliconAdvantage: FC<Props> = ({
@@ -15,8 +15,8 @@ export const SiliconAdvantage: FC<Props> = ({
   alt,
 }) => {
   return (
-    <div className="sm:flex flex-row w-10/12 sm:w-4/5 lg:w-3/5 xl:w-1/2 2xl:w-2/5 mb-20">
-      <div className=" basis-3/12 ">
+    <div className=" sm:bg-transparent ml-9 sm:ml-0 sm:flex flex-row w-10/12 sm:w-4/5 lg:w-3/5 xl:w-1/2 2xl:w-2/5 mb-20">
+      <div className=" basis-3/12 xl:mr-2">
         <div className="flex justify-center sm:justify-start">
           <div>
             <Image
@@ -33,9 +33,9 @@ export const SiliconAdvantage: FC<Props> = ({
         </div>
       </div>
 
-      <p className="basis-9/12 text-xl text-white font-bold flex-3 text-center sm:text-left ">
+      <p className="basis-9/12 px-6 text-lg sm:text-xl text-white font-bold flex-3 text-center sm:text-left ">
         {description}
       </p>
     </div>
-  )
-}
+  );
+};

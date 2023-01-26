@@ -16,8 +16,8 @@ export const SiliconShape: FC<Props> = ({ name, valueTop, left }) => {
         'invisible lg:visible absolute',
         valueTop,
         left
-          ? 'lg:left-0 xl:left-[150px] 2xl:left-[280px]'
-          : 'lg:right-0 xl:right-[150px] 2xl:right-[280px]'
+          ? 'lg:left-0 xl:left-[170px] 2xl:left-[310px]'
+          : 'lg:right-0 xl:right-[170px] 2xl:right-[310px]'
       )}
     >
       <Image
