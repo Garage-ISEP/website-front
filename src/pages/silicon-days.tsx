@@ -9,8 +9,7 @@ import { Carousel } from 'flowbite-react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
-
-const Image = dynamic(() => import('next/image'), { ssr: false });
+import Image from 'next/image';
 
 const SiliconDays = () => {
   const [background, setBackground] = useState(1);
