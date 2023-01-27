@@ -1,5 +1,5 @@
-import { GarageSection } from '@/components/GarageSection/GarageSection'
-import Head from 'next/head'
+import { GarageSection } from '@/components/GarageSection/GarageSection';
+import Head from 'next/head';
 
 export default function Home() {
   return (
@@ -12,5 +12,5 @@ export default function Home() {
       </Head>
       <GarageSection />
     </>
-  )
+  );
 }
