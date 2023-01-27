@@ -4,10 +4,7 @@ import { FC } from 'react';
 
 export const OutlinedButton: FC<ButtonProps> = ({ className, children }) => {
   return (
-    <Button
-      variant={'outlined'}
-      className={classNames('rounded flex', className)}
-    >
+    <Button variant={'outlined'} className={classNames('rounded', className)}>
       {children}
     </Button>
   );
