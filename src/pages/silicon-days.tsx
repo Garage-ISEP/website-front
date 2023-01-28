@@ -10,6 +10,7 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { CustomButton } from '@/components/controls/Button/CustomButton';
 
 const SiliconDays = () => {
   const [background, setBackground] = useState(1);
@@ -84,12 +85,13 @@ const SiliconDays = () => {
               développer de nouvelles idées en compagnie de développeurs, de
               designers et d&apos;autres professionnels de la technologie.
             </p>
-            <button
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-8 mt-5 rounded"
-              onClick={() => window.open('https://garageisep.com', '_blank')}
+
+            <CustomButton
+              onClick={() => window.open('https://garage isep.com', '_blank')}
+              className="bg-blue-600 py-2 px-8 mt-5 hover:bg-blue-700"
             >
               Rejoindre
-            </button>
+            </CustomButton>
             <hr className="w-4/5 lg:w-3/5 xl:w-1/2 2xl:w-2/5 h-px h-1 my-8 bg-white border-0 rounded md:my-12" />
             <div className="hidden sm:contents">
               {siliconAdvantages.map((o: SiliconAdvantageModel) => (
@@ -120,8 +122,8 @@ const SiliconDays = () => {
             <h2 className="mt-6 sm:mt-0 text-center text-4xl font-bold text-white drop-shadow-lg shadow-black">
               Questions ?
             </h2>
-            <button
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-0 px-10 mt-5 rounded"
+            <CustomButton
+              className="bg-blue-600 hover:bg-blue-700 px-10 mt-5"
               onClick={() =>
                 (window.location.href = 'mailto:bureau@garageisep.com')
               }
@@ -135,7 +137,7 @@ const SiliconDays = () => {
                 ></Image>
                 <p> Contactez-nous</p>
               </div>
-            </button>
+            </CustomButton>
             <hr className="w-4/5 xl:w-1/2 2xl:w-2/5 h-px h-1 my-8 bg-white border-0 rounded md:my-12" />
             <p className="text-center font-bold text-gray-700 text-lg w-10/12 mb-8">
               Lorem Ipsum is simply dummy text of the printing and typesetting
