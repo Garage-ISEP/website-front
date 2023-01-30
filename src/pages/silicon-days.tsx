@@ -6,7 +6,6 @@ import {
 } from '@/data/silicon-advantages';
 import classNames from 'classnames';
 import { Carousel } from 'flowbite-react';
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
@@ -34,9 +33,9 @@ const SiliconDays = () => {
 
   useEffect(() => {
     console.log(background);
-
     console.log('bs', backgroundStyle);
   }, [background, backgroundStyle]);
+
   return (
     <>
       <Head>
