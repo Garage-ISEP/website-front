@@ -31,11 +31,6 @@ const SiliconDays = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(background);
-    console.log('bs', backgroundStyle);
-  }, [background, backgroundStyle]);
-
   return (
     <>
       <Head>
@@ -46,12 +41,7 @@ const SiliconDays = () => {
         />
       </Head>
       <>
-        <main
-          className={classNames(
-            'pt-12',
-            backgroundStyle + ' bg-auto bg-no-repeat bg-center'
-          )}
-        >
+        <main className={classNames(backgroundStyle + ' bg-cover')}>
           <SiliconShape name={'shape1'} left={false} valueTop={'top-[-80px]'} />
           <SiliconShape name={'shape3'} left={false} valueTop={'top-[770px]'} />
           <SiliconShape name={'shape2'} left={true} valueTop={'top-[100px]'} />
@@ -59,10 +49,11 @@ const SiliconDays = () => {
 
           <div className="sm:mx-4 lg:mx-20 xl:mx-10 2xl:mx-20 grid place-items-center ">
             <Image
-              src={'/images/SiliconDays.svg'}
+              src={'/images/SiliconDays.png'}
               alt={''}
-              width={580}
-              height={580}
+              width={450}
+              height={450}
+              className="mt-10 w-10/12 sm:w-1/4	"
             ></Image>
             <h2 className="text-center text-4xl font-bold text-white drop-shadow-lg shadow-black mt-4">
               24 mars 2023
@@ -73,7 +64,7 @@ const SiliconDays = () => {
                 alt={'Logo Garage'}
                 width={250}
                 height={250}
-                className="flex justify-center mr-3 mt-3 mb-4"
+                className="flex justify-center mr-1 mt-3 mb-4"
               ></Image>
             </a>
             <h2 className=" text-center text-4xl font-bold text-white drop-shadow-lg shadow-black mb-3">
@@ -86,8 +77,13 @@ const SiliconDays = () => {
             </p>
 
             <CustomButton
-              onClick={() => window.open('https://garage isep.com', '_blank')}
-              className="bg-blue-600 py-2 px-8 mt-5 hover:bg-blue-700"
+              onClick={() =>
+                window.open(
+                  'https://docs.google.com/forms/d/e/1FAIpQLSfH4y_eP1FjCRfefEEQEwqpQOEfbRMacLsBw6f-JiYhjxaWsA/viewform',
+                  '_blank'
+                )
+              }
+              className="bg-blue-600 py-2 px-8 mt-8 hover:bg-blue-700"
             >
               Rejoindre
             </CustomButton>
