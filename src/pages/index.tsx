@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import Head from 'next/head'
 import {affichageLabs} from '@components/Header/lab'
+=======
+import Head from 'next/head';
+
+>>>>>>> 1b5845abfc7236e9e160445ea52a5df8e8bf05e9
 export default function Home() {
   return (
     <>
@@ -12,5 +17,5 @@ export default function Home() {
       <h1 className="text-4xl font-bold">Garage ISEP Website </h1>
       <affichageLabs/>
     </>
-  )
+  );
 }
