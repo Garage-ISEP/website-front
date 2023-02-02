@@ -7,7 +7,7 @@ export const GarageSection = () => {
       className="h-screen bg-[url('../assets/images/background-garage.jpg')] bg-cover flex items-center justify-center sm:justify-start"
       id="GarageISEP"
     >
-      <div className="ml-10 w-10/12 sm:w-2/5">
+      <div className=" w-10/12 sm:w-2/5 sm:ml-10">
         <Image
           src={'/g-logo-h-w.svg'}
           alt={''}
