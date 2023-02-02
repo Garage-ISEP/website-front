@@ -1,3 +1,4 @@
+import { AppFooter } from '@/components/AppFooter/AppFooter';
 import Head from 'next/head';
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
         <link rel="icon" href="/Garage-logo.svg" />
       </Head>
       <h1 className="text-4xl font-bold">Garage ISEP Website </h1>
+      <AppFooter />
     </>
   );
 }
