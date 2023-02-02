@@ -81,7 +81,7 @@ export const AppFooter = () => {
         </div>
         <div className="text-center text-gray-400 mt-10 text-sm mb-2">
           <span>© 2023 - </span>
-          <a className=" font-semibold" href="https://tailwind-elements.com/">
+          <a className=" font-semibold" href="#GarageISEP">
             Garage ISEP
           </a>
         </div>
