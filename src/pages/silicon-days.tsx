@@ -7,7 +7,7 @@ import {
 import classNames from 'classnames';
 import { Carousel } from 'flowbite-react';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { CustomButton } from '@/components/controls/Button/CustomButton';
 
@@ -79,7 +79,7 @@ const SiliconDays = () => {
             <CustomButton
               onClick={() =>
                 window.open(
-                  'https://docs.google.com/forms/d/e/1FAIpQLSfH4y_eP1FjCRfefEEQEwqpQOEfbRMacLsBw6f-JiYhjxaWsA/viewform',
+                  'https://form.jotform.com/230302121540333',
                   '_blank'
                 )
               }
