@@ -25,16 +25,17 @@ export const GarageSection = () => {
           progress over time in the Activity app on your iPhone. Ready? Go.
         </p>
         <div className="flex justify-center sm:justify-start">
-          {/* Vers mail dans un premier temps, plus tard renvoyer vers section contact */}
-          <OutlinedButton
-            onClick={() =>
-              (window.location.href = 'mailto:bureau@garageisep.com')
-            }
-            className="border-white text-white"
-            color="white"
-          >
-            Nous contacter
-          </OutlinedButton>
+          <a href="#contact">
+            <OutlinedButton
+              onClick={() =>
+                (window.location.href = 'mailto:bureau@garageisep.com')
+              }
+              className="border-white text-white"
+              color="white"
+            >
+              Nous contacter
+            </OutlinedButton>
+          </a>
         </div>
       </div>
     </section>
