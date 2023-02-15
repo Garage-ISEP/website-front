@@ -83,6 +83,7 @@ const SiliconDays = () => {
               ))}
             </div>
           </div>
+          {/* Caroussel pour la version mobile */}
           <div className="contents sm:hidden h-96 ">
             <Carousel>
               {siliconAdvantages.map((o: SiliconAdvantageModel) => (
