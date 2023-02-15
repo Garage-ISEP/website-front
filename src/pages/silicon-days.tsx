@@ -4,33 +4,12 @@ import {
   SiliconAdvantageModel,
   siliconAdvantages,
 } from '@/data/silicon-advantages';
-import classNames from 'classnames';
 import { Carousel } from 'flowbite-react';
 import Head from 'next/head';
-import { useState } from 'react';
 import Image from 'next/image';
 import { CustomButton } from '@/components/controls/Button/CustomButton';
 
 const SiliconDays = () => {
-  const [background, setBackground] = useState(1);
-  const [backgroundStyle, setBackgroundStyle] = useState(
-    "bg-[url('../assets/images/background-silicon1.jpg')]"
-  );
-
-  const changeBackground = () => {
-    if (background === 2) {
-      setBackground(1);
-      setBackgroundStyle(
-        "bg-[url('../assets/images/background-silicon1.jpg')]"
-      );
-    } else {
-      setBackground(background + 1);
-      setBackgroundStyle(
-        "bg-[url('../assets/images/background-silicon2.jpg')]"
-      );
-    }
-  };
-
   return (
     <>
       <Head>
@@ -41,7 +20,11 @@ const SiliconDays = () => {
         />
       </Head>
       <>
-        <main className={classNames(backgroundStyle + ' bg-cover')}>
+        <main
+          className={
+            "bg-[url('../assets/images/background-silicon1.jpg')] bg-cover"
+          }
+        >
           <SiliconShape name={'shape1'} left={false} valueTop={'top-[-80px]'} />
           <SiliconShape name={'shape3'} left={false} valueTop={'top-[770px]'} />
           <SiliconShape name={'shape2'} left={true} valueTop={'top-[100px]'} />
@@ -139,13 +122,6 @@ const SiliconDays = () => {
               industry. Lorem Ipsum has been the industry&apos;s standard dummy
               text ever since the 1500s.
             </p>
-
-            <button
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-8 mt-5 rounded mb-5"
-              onClick={() => changeBackground()}
-            >
-              Change background
-            </button>
           </div>
         </main>
       </>
