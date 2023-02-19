@@ -2,6 +2,7 @@ import { GlobalState } from '@/Contexts/GlobalContext/GlobalStatet';
 import Head from 'next/head';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
+import { AppFooter } from '@/components/AppFooter/AppFooter';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -12,6 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>{' '}
       <GlobalState>
         <Component {...pageProps} />
+        <AppFooter />
       </GlobalState>{' '}
     </>
   );
