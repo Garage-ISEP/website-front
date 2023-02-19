@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export const AppFooter = () => {
   return (
-    <div className="flex items-end w-full min-h-screen">
+    <div className="flex items-end w-full mt-10">
       <footer className="w-full text-white bg-[#3D4242] body-font">
         <div className="flex justify-center mt-3">
           <Image
