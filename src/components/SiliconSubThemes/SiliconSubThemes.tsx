@@ -17,8 +17,8 @@ export const SiliconAdvantage: FC<Props> = ({
   company,
 }) => {
   return (
-    <div className="ml-9 mr-5 sm:mr-0 sm:ml-0 w-10/12 sm:w-4/5 lg:w-3/5 xl:w-1/2 2xl:w-2/5 mb-16 ">
-      <div className="flex items-center	mb-4">
+    <div className="ml-9 mr-5 sm:mr-0 sm:ml-0 w-10/12 sm:w-4/5 lg:w-3/5 xl:w-1/2 2xl:w-2/5 mb-9 sm:mb-12 ">
+      <div className="flex items-center	mb-3">
         <span className="text-lg sm:text-2xl text-gray-900 font-bold">
           {name}
 
