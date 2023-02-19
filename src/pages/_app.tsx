@@ -1,14 +1,18 @@
 import { GlobalState } from '@/Contexts/GlobalContext/GlobalStatet';
+import Head from 'next/head';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
-import { ThemeProvider } from '@material-tailwind/react';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <GlobalState>
-      <ThemeProvider>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/Garage-logo.svg" />
+      </Head>{' '}
+      <GlobalState>
         <Component {...pageProps} />
-      </ThemeProvider>
-    </GlobalState>
+      </GlobalState>{' '}
+    </>
   );
 }
