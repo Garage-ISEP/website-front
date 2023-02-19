@@ -109,8 +109,8 @@ const SiliconDays = () => {
             ))}{' '}
           </div>
 
-          <div className="grid place-items-center">
-            <h2 className="mt-6 sm:mt-0 text-center text-4xl font-bold text-white drop-shadow-lg shadow-black">
+          <div className="grid place-items-center mt-5">
+            <h2 className="sm:mt-0 text-center text-4xl font-bold text-white drop-shadow-lg shadow-black">
               Questions ?
             </h2>
             <CustomButton
