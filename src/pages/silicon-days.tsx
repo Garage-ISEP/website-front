@@ -1,13 +1,15 @@
-import { SiliconAdvantage } from '@/components/SiliconAdvantage/SiliconAdvantage';
+import { SiliconAdvantage } from '@/components/SiliconSubThemes/SiliconSubThemes';
 import { SiliconShape } from '@/components/SiliconShape/SiliconShape';
 import {
-  SiliconAdvantageModel,
-  siliconAdvantages,
-} from '@/data/silicon-advantages';
+  SiliconSubThemesModel,
+  siliconSubThemes,
+} from '@/data/silicon-subthemes';
+import { SiliconCalendarModel, siliconCalendar } from '@/data/calendar-silicon';
 import { Carousel } from 'flowbite-react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { CustomButton } from '@/components/controls/Button/CustomButton';
+import { SiliconCalendar } from '@/components/SiliconCalendar/SiliconCalendar';
 
 const SiliconDays = () => {
   return (
@@ -54,11 +56,14 @@ const SiliconDays = () => {
               Allons chercher l&apos;innovation
             </h2>
             <p className="text-center font-bold text-white text-xl w-10/12 sm:w-4/5 xl:w-2/5">
-              Rejoignez-nous pour un hackathon d&apos;un mois où vous pourrez
-              développer de nouvelles idées en compagnie de développeurs, de
-              designers et d&apos;autres professionnels de la technologie.
+              Vous êtes passionnés de technologie et souhaitez relever des défis
+              innovants ? Rejoignez-nous aux prochains Silicon Days, un
+              hackathon organisé par Garage Isep ! Le thème de cette édition est
+              &quot;Tech for Good&quot;, vous permettant ainsi de découvrir aux
+              côtés d&apos;enterprises innovantes les dernières tendances en
+              matière de technologie pour accélérer la transition vers une
+              société plus durable et responsable.
             </p>
-
             <CustomButton
               onClick={() =>
                 window.open(
@@ -71,32 +76,39 @@ const SiliconDays = () => {
               Rejoindre
             </CustomButton>
             <hr className="w-4/5 lg:w-3/5 xl:w-1/2 2xl:w-2/5 h-px h-1 my-8 bg-white border-0 rounded md:my-12" />
-            <div className="hidden sm:contents">
-              {siliconAdvantages.map((o: SiliconAdvantageModel) => (
-                <SiliconAdvantage
-                  name={o.name}
-                  description={o.description}
-                  icon={o.icon}
-                  alt={o.alt}
-                  key={o.id}
+            {/* TODO : Caroussel pour la version mobile */}
+            {siliconSubThemes.map((o: SiliconSubThemesModel) => (
+              <SiliconAdvantage
+                name={o.name}
+                description={o.description}
+                icon={o.icon}
+                alt={o.alt}
+                key={o.id}
+                company={o.company}
+              />
+            ))}
+            <hr className="w-4/5 lg:w-3/5 xl:w-1/2 2xl:w-2/5 h-px h-1 bg-white border-0 rounded " />
+            <h2 className=" mt-10 text-left mb-12 text-2xl font-bold">
+              <span className="flex items-center">
+                Agenda{' '}
+                <Image
+                  src={'/images/calendar.png'}
+                  alt="calendar"
+                  width={40}
+                  height={40}
+                  className="ml-4"
                 />
-              ))}
-            </div>
+              </span>
+            </h2>
+            {siliconCalendar.map((o: SiliconCalendarModel) => (
+              <SiliconCalendar
+                name={o.name}
+                description={o.description}
+                key={o.id}
+              />
+            ))}{' '}
           </div>
-          {/* Caroussel pour la version mobile */}
-          <div className="contents sm:hidden h-96 ">
-            <Carousel>
-              {siliconAdvantages.map((o: SiliconAdvantageModel) => (
-                <SiliconAdvantage
-                  name={o.name}
-                  description={o.description}
-                  icon={o.icon}
-                  alt={o.alt}
-                  key={o.id}
-                />
-              ))}
-            </Carousel>
-          </div>
+
           <div className="grid place-items-center">
             <h2 className="mt-6 sm:mt-0 text-center text-4xl font-bold text-white drop-shadow-lg shadow-black">
               Questions ?
