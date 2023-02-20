@@ -1,8 +1,10 @@
 import Image from 'next/image';
 
 export const AppFooter = () => {
+  const year = new Date().getFullYear();
+
   return (
-    <div className="flex items-end w-full mt-10">
+    <div className="flex items-end w-full mt-20">
       <footer className="w-full text-white bg-[#3D4242] body-font">
         <div className="flex justify-center mt-3">
           <Image
@@ -27,9 +29,9 @@ export const AppFooter = () => {
           >
             <svg
               fill="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               className="w-7 h-7"
               viewBox="0 0 24 24"
             >
@@ -46,9 +48,9 @@ export const AppFooter = () => {
             <svg
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               className="w-7 h-7"
               viewBox="0 0 24 24"
             >
@@ -65,9 +67,9 @@ export const AppFooter = () => {
             <svg
               fill="currentColor"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="0"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="0"
               className="w-7 h-7"
               viewBox="0 0 24 24"
             >
@@ -80,7 +82,7 @@ export const AppFooter = () => {
           </a>
         </div>
         <div className="text-center text-gray-400 mt-10 text-sm mb-2">
-          <span>© 2023 - </span>
+          <span>© {year} - </span>
           <a className=" font-semibold" href="#GarageISEP">
             Garage ISEP
           </a>

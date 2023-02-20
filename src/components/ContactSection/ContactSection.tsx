@@ -1,10 +1,25 @@
+import classNames from 'classnames';
 import Image from 'next/image';
 
 export const ContactSection = () => {
   return (
-    <section className="h-screen ">
-      <div className="bg-[url('../assets/images/background-contact.jpg')] h-screen sm:h-4/6 bg-cover grid place-items-center">
-        <div className="sm:mt-40 bg-[#3D4242] w-10/12 sm:w-4/5 md:sm-2/3 lg:w-1/2 rounded py-8 text-white sm:px-5 drop-shadow-xl sm:translate-y-48		">
+    <section className=" " id="contact">
+      <div
+        className={classNames(
+          {
+            /*"bg-[url('../assets/images/background-contact.jpg')] h-screen sm:h-4/6 bg-cover"*/
+          },
+          'grid place-items-center'
+        )}
+      >
+        <div
+          className={classNames(
+            {
+              /*'sm:mt-40 sm:translate-y-48'*/
+            },
+            'mt-20 bg-[#3D4242] w-10/12 sm:w-4/5 md:sm-2/3 lg:w-1/2 rounded py-8 text-white sm:px-5 drop-shadow-xl'
+          )}
+        >
           <h1 className="font-bold text-2xl sm:text-3xl uppercase text-center">
             Nous contacter
           </h1>

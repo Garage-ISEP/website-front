@@ -10,7 +10,7 @@ export const OutlinedButton: FC<ButtonProps> = ({
   return (
     <Button
       variant={'outlined'}
-      className={classNames('ml-5 mt-5 rounded', className)}
+      className={classNames('mt-1 rounded', className)}
       onClick={onClick}
     >
       {children}
