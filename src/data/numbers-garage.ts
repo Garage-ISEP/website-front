@@ -10,7 +10,7 @@ export const numbersGarage: NumberGarageModel[] = [
     id: 0,
     value: '+70',
     name: 'garagistes',
-    description: "prêt à faire vivre l'association",
+    description: "prêts à innover et faire vivre l'association",
   },
   {
     id: 1,
