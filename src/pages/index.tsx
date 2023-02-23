@@ -1,3 +1,4 @@
+import { Header } from '@/components/Header/header'
 import Head from 'next/head'
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/Garage-logo.svg" />
       </Head>
+      <Header />
       <h1 className="text-4xl font-bold">Garage ISEP Website </h1>
     </>
   )
