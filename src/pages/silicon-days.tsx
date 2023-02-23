@@ -10,6 +10,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { CustomButton } from '@/components/controls/Button/CustomButton';
 import { SiliconCalendar } from '@/components/SiliconCalendar/SiliconCalendar';
+import { Header } from '@/components/Header/Header';
 
 const SiliconDays = () => {
   return (
@@ -27,6 +28,7 @@ const SiliconDays = () => {
             "bg-[url('../assets/images/background-silicon1.jpg')] bg-cover"
           }
         >
+          <Header />
           <SiliconShape name={'shape1'} left={false} valueTop={'top-[-80px]'} />
           <SiliconShape name={'shape3'} left={false} valueTop={'top-[770px]'} />
           <SiliconShape name={'shape2'} left={true} valueTop={'top-[100px]'} />
