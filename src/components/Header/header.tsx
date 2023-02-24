@@ -1,10 +1,41 @@
-/* eslint-disable jsx-a11y/alt-text */
+import classNames from 'classnames';
+import dynamic from 'next/dynamic';
+import Link from 'next/link';
+import { FC, useEffect, useState } from 'react';
 /* eslint-disable @next/next/no-img-element */
-/* eslint-disable @next/next/no-html-link-for-pages */
-export const Header = () => {
+
+interface Props {
+  logo?: string;
+  logoMobile?: string;
+  pushedEvent?: string;
+  pushedEventStyle?: string;
+  hoverPushedStyle?: string;
+  className?: string;
+}
+export const Header: FC<Props> = ({
+  logo,
+  pushedEvent,
+  pushedEventStyle,
+  hoverPushedStyle,
+  className,
+  logoMobile,
+}) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (/Android|iPhone/i.test(navigator.userAgent)) {
+      setIsMobile(true);
+    } else setIsMobile(false);
+  }, []);
+
   return (
-    <header className="bg-transparent relative w-9/12 flex items-center justify-between h-20 mx-auto 2xl:mx-auto z-20">
-      <a
+    <header
+      className={classNames(
+        'bg-transparent relative w-11/12 flex items-center justify-between h-20 mx-auto 2xl:mx-auto z-20',
+        className
+      )}
+    >
+      <Link
         href="/"
         className="relative flex items-center text-xl font-bold text-white"
       >
@@ -14,32 +45,52 @@ export const Header = () => {
   */}
         <img
           className="object-scale-down h-16"
-          src="https://cdn.devdojo.com/tails/images/QL2K5DTLLktLTeLfDOZ5ub5wDfXvf1NciZC15uNo.png"
+          alt="Logo Garage"
+          src={
+            logo
+              ? isMobile
+                ? logoMobile
+                : logo
+              : isMobile
+              ? 'https://cdn.devdojo.com/tails/images/QL2K5DTLLktLTeLfDOZ5ub5wDfXvf1NciZC15uNo.png'
+              : '/images/logo-black.png'
+          }
         ></img>
-      </a>
+      </Link>
       <nav className="text-sm font-bold text-white sm:text-base 2xl:text-xl">
         {/*<a href="#_" className="relative inline-block px-0 pb-1 mr-2 group sm:mr-4">
                 <span className="">Projets</span>
                 <span className="h-0.5 w-full absolute bottom-0 opacity-0 group-hover:opacity-100 transition ease-out duration-200 translate-y-1 group-hover:-translate-y-0 left-0 bg-white"></span>
 </a>*/}
-        <a
+        <Link
           href="/silicon-days"
           className="relative inline-block px-0 pb-1 mr-2 group sm:mr-4"
         >
-          <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 contenteditable= 2xl:drop-shadow">
-            SiliconDays
+          <span
+            className={classNames(
+              'font-extrabold  2xl:drop-shadow',
+              pushedEventStyle
+            )}
+          >
+            {pushedEvent}
           </span>
-          <span className="h-0.5 w-full absolute bottom-0 opacity-0 group-hover:opacity-100 transition ease-out duration-200 translate-y-1 group-hover:-translate-y-0 left-0 bg-gradient-to-r from-purple-400 to-pink-600"></span>
-        </a>
-        <a
+          <span
+            className={classNames(
+              'h-0.5 w-full absolute bottom-0 opacity-0 group-hover:opacity-100 transition ease-out duration-200 translate-y-1 group-hover:-translate-y-0 left-0 bg-white',
+              hoverPushedStyle
+            )}
+          ></span>
+        </Link>
+        {/*<Link
           href="#"
           className="relative inline-block px-0 pb-1 mr-2 group sm:mr-4"
         >
           <span className="">Events</span>
           <span className="h-0.5 w-full absolute bottom-0 opacity-0 group-hover:opacity-100 transition ease-out duration-200 translate-y-1 group-hover:-translate-y-0 left-0 bg-white"></span>
-        </a>
-        <a
+            </Link>*/}
+        <Link
           href="https://github.com/Garage-ISEP/"
+          target={'_blank'}
           className="relative inline-block px-0 pb-1 pl-7 group"
         >
           <span className="flex items-center h-full">
@@ -60,7 +111,7 @@ export const Header = () => {
             </svg>
           </span>
           <span className="h-0.5 w-full absolute bottom-0 opacity-0 group-hover:opacity-100 transition ease-out duration-200 translate-y-1 group-hover:-translate-y-0 left-0 bg-white"></span>
-        </a>
+        </Link>
       </nav>
     </header>
   );

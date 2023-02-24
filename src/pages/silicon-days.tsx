@@ -28,13 +28,18 @@ const SiliconDays = () => {
             "bg-[url('../assets/images/background-silicon1.jpg')] bg-cover"
           }
         >
-          <Header />
           <SiliconShape name={'shape1'} left={false} valueTop={'top-[-80px]'} />
           <SiliconShape name={'shape3'} left={false} valueTop={'top-[770px]'} />
           <SiliconShape name={'shape2'} left={true} valueTop={'top-[100px]'} />
           <SiliconShape name={'shape4'} left={true} valueTop={'top-[950px]'} />
 
           <div className="sm:mx-4 lg:mx-20 xl:mx-10 2xl:mx-20 grid place-items-center ">
+            <Header
+              logo={'/g-logo-h-w.svg'}
+              pushedEvent={"L'association"}
+              className="mt-5"
+              logoMobile={'/images/logo-white.png'}
+            />
             <Image
               src={'/images/SiliconDays.png'}
               alt={''}
@@ -116,7 +121,7 @@ const SiliconDays = () => {
               Questions ?
             </h2>
             <CustomButton
-              className="bg-blue-600 hover:bg-blue-700 px-10 mt-5"
+              className="bg-blue-600 hover:bg-blue-700 px-10 mt-5 mb-12"
               onClick={() =>
                 (window.location.href = 'mailto:bureau@garageisep.com')
               }
@@ -131,12 +136,6 @@ const SiliconDays = () => {
                 <p> Contactez-nous</p>
               </div>
             </CustomButton>
-            <hr className="w-4/5 xl:w-1/2 2xl:w-2/5 h-px h-1 my-8 bg-white border-0 rounded md:my-12" />
-            <p className="text-center font-bold text-gray-700 text-lg w-10/12 mb-8">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s.
-            </p>
           </div>
         </main>
       </>

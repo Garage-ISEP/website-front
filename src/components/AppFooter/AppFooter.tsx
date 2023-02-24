@@ -4,7 +4,7 @@ export const AppFooter = () => {
   const year = new Date().getFullYear();
 
   return (
-    <div className="flex items-end w-full mt-20">
+    <div className="flex items-end w-full">
       <footer className="w-full text-white bg-[#3D4242] body-font">
         <div className="flex justify-center mt-3">
           <Image

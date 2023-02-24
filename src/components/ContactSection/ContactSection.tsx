@@ -9,7 +9,7 @@ export const ContactSection = () => {
           {
             /*"bg-[url('../assets/images/background-contact.jpg')] h-screen sm:h-4/6 bg-cover"*/
           },
-          'grid place-items-center'
+          'grid place-items-center mb-16'
         )}
       >
         <div

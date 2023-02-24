@@ -14,7 +14,18 @@ export const HeroSection = () => {
           ></img>
         </div>
         <div className="px-10 mx-auto max-w-7xl">
-          <Header />
+          <Header
+            logo={
+              'https://cdn.devdojo.com/tails/images/QL2K5DTLLktLTeLfDOZ5ub5wDfXvf1NciZC15uNo.png'
+            }
+            pushedEvent={'SiliconDays'}
+            pushedEventStyle={
+              'text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'
+            }
+            hoverPushedStyle={'bg-gradient-to-r from-purple-400 to-pink-600'}
+            className={'w-10/12'}
+            logoMobile={'/images/logo-black.png'}
+          />
           <p className="absolute left-0 items-center hidden mt-48 ml-6 text-xs text-white uppercase origin-left transform rotate-90 lg:flex opacity-70">
             <svg
               className="w-5 h-5 mr-2"
