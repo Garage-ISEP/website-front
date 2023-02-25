@@ -10,9 +10,11 @@ export default function Home() {
         <title>Garage ISEP</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <GarageSection />
-      <GarageNumberSection />
-      <ContactSection />
+      <div className="bg-gray-100">
+        <GarageSection />
+        <GarageNumberSection />
+        <ContactSection />
+      </div>
     </>
   );
 }

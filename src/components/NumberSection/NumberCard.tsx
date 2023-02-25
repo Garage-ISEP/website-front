@@ -4,6 +4,7 @@ interface Props {
   value: string;
   name: string;
   desciption?: string;
+  className?: string;
 }
 
 export const NumberCard: FC<Props> = ({ value, name, desciption }) => {

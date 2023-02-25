@@ -4,7 +4,7 @@ import { NumberCard } from './NumberCard';
 
 export const GarageNumberSection: FC = ({}) => {
   return (
-    <section className="pb-10 bg-gray-100">
+    <section className="pb-10 ">
       <div className="grid place-items-center">
         <h1 className="mt-10 text-4xl font-bold">Garage ISEP</h1>
         <h2 className="font-bold text-2xl mt-2 text-blue-800 mb-8">
@@ -12,7 +12,7 @@ export const GarageNumberSection: FC = ({}) => {
         </h2>
 
         <div className="w-11/12 sm:w-9/12 2xl:w-8/12">
-          <div className="grid gap-4 grid-cols-2 lg:grid-cols-3 lg:gap-8 grid-cols-2">
+          <div className="grid gap-4 grid-cols-2 lg:grid-cols-3 lg:gap-8 last:col-start-2 col-start-1">
             {numbersGarage.map((number: NumberGarageModel) => (
               <NumberCard
                 value={number.value}

@@ -9,20 +9,20 @@ export const numbersGarage: NumberGarageModel[] = [
   {
     id: 0,
     value: '+70',
-    name: 'garagistes',
-    description: "prêts à innover et faire vivre l'association",
+    name: 'Garagistes',
+    description: "prêts à innover et faire vivre l'association.",
   },
   {
     id: 1,
     value: '6',
     name: 'Labs',
-    description: 'spécialisés dans différents domaines technologiques',
+    description: 'spécialisés dans différents domaines technologiques.',
   },
   {
     id: 2,
     value: '+30',
-    name: 'projets',
-    description: 'innovants, sur des technologies variées et modernes',
+    name: 'Projets',
+    description: 'innovants, sur des technologies variées et modernes.',
   },
   {
     id: 3,
@@ -32,8 +32,16 @@ export const numbersGarage: NumberGarageModel[] = [
   },
   {
     id: 4,
+    value: '2',
+    name: 'Panic Night',
+    description:
+      'par an, nuits blanches pour aider les étudiants dans leurs projets.',
+  },
+  {
+    id: 5,
     value: '1',
     name: 'Hackathon',
-    description: "les Silicon Days, afin d'apprendre entouré de professionnels",
+    description:
+      "les Silicon Days, afin d'apprendre entouré de professionnels.",
   },
 ];
