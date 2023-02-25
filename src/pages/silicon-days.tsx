@@ -5,7 +5,6 @@ import {
   siliconSubThemes,
 } from '@/data/silicon-subthemes';
 import { SiliconCalendarModel, siliconCalendar } from '@/data/calendar-silicon';
-import { Carousel } from 'flowbite-react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { CustomButton } from '@/components/controls/Button/CustomButton';
