@@ -29,7 +29,7 @@ export const ContactSection = () => {
           <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 mx-44" />
           <div className="grid place-items-center sm:flex sm:mt-10 px-8 pb-3  ">
             <a
-              className="grid place-items-center w-1/3 font-bold mb-4 sm:mb-0"
+              className="grid place-items-center w-1/3 font-bold mb-4 sm:mb-0 hover:text-[#D5D5D5]"
               href="https://www.facebook.com/garageisep/"
               target="_blank"
               rel="noreferrer"
@@ -44,7 +44,7 @@ export const ContactSection = () => {
               <p className="text-sm mt-1">GarageISEP</p>
             </a>
             <a
-              className="grid place-items-center w-1/3 font-bold mb-4 sm:mb-0"
+              className="grid place-items-center w-1/3 font-bold mb-4 sm:mb-0 hover:text-[#D5D5D5]"
               href="https://fr.linkedin.com/company/garageisep?original_referer="
               target="_blank"
               rel="noreferrer"
@@ -59,7 +59,7 @@ export const ContactSection = () => {
               <p className="text-sm mt-1">GarageISEP</p>
             </a>
             <a
-              className="grid place-items-center font-bold sm:w-1/3 mb-4 sm:mb-0"
+              className="grid place-items-center font-bold sm:w-1/3 mb-4 sm:mb-0 hover:text-[#D5D5D5]"
               href="mailto:bureau@garageisep.com"
             >
               <Image

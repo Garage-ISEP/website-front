@@ -26,6 +26,7 @@ export const AppFooter = () => {
             href="https://www.facebook.com/garageisep/"
             target="_blank"
             rel="noreferrer"
+            aria-label="Facebook"
           >
             <svg
               fill="currentColor"
@@ -44,6 +45,7 @@ export const AppFooter = () => {
             href="https://www.instagram.com/garageisep/?hl=fr"
             target="_blank"
             rel="noreferrer"
+            aria-label="Instagram"
           >
             <svg
               fill="none"
@@ -63,6 +65,7 @@ export const AppFooter = () => {
             href="https://www.linkedin.com/company/garageisep/mycompany/"
             target="_blank"
             rel="noreferrer"
+            aria-label="Linkedin"
           >
             <svg
               fill="currentColor"
@@ -81,7 +84,7 @@ export const AppFooter = () => {
             </svg>
           </a>
         </div>
-        <div className="text-center text-gray-400 mt-10 text-sm mb-2">
+        <div className="text-center text-gray-300 mt-10 text-sm mb-2">
           <span>© {year} - </span>
           <a className=" font-semibold" href="#GarageISEP">
             Garage ISEP

@@ -39,6 +39,7 @@ const SiliconDays = () => {
               pushedEvent={"L'association"}
               className="mt-5"
               logoMobile={'/images/logo-white.png'}
+              linkPushed={'/#GarageISEP'}
             />
             <Image
               src={'/images/SiliconDays.png'}
@@ -78,7 +79,7 @@ const SiliconDays = () => {
                   '_blank'
                 )
               }
-              className="bg-blue-600 py-2 px-8 mt-8 hover:bg-blue-700"
+              className="bg-blue-600 px-8 mt-8 hover:bg-blue-700"
             >
               Rejoindre
             </CustomButton>
