@@ -1,6 +1,22 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import { GlobalState } from '@/Contexts/GlobalContext/GlobalStatet';
+import Head from 'next/head';
+import '@/styles/globals.css';
+import type { AppProps } from 'next/app';
+import { AppFooter } from '@/components/AppFooter/AppFooter';
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/Garage-logo.svg" />
+      </Head>{' '}
+      <GlobalState>
+        <div className="bg-gray-100">
+          <Component {...pageProps} />
+          <AppFooter />
+        </div>
+      </GlobalState>{' '}
+    </>
+  );
 }
