@@ -12,13 +12,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Garage ISEP - Inovation HUB" />
       </Head>
-      <div className="bg-gray-100">
+      <>
         <HeroSection />
-
         <GarageSection />
         <GarageNumberSection />
         <ContactSection />
-      </div>
+      </>
     </>
   );
 }

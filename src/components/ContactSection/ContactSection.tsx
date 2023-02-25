@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const ContactSection = () => {
   return (
-    <section className=" " id="contact">
+    <section className="" id="contact">
       <div
         className={classNames(
           {

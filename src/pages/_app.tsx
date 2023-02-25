@@ -12,8 +12,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/Garage-logo.svg" />
       </Head>{' '}
       <GlobalState>
-        <Component {...pageProps} />
-        <AppFooter />
+        <div className="bg-gray-100">
+          <Component {...pageProps} />
+          <AppFooter />
+        </div>
       </GlobalState>{' '}
     </>
   );
