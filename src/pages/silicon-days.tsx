@@ -9,7 +9,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { CustomButton } from '@/components/controls/Button/CustomButton';
 import { SiliconCalendar } from '@/components/SiliconCalendar/SiliconCalendar';
-import { Header } from '@/components/Header/Header';
+import { Header } from '@/components/Header/header';
 
 const SiliconDays = () => {
   return (
