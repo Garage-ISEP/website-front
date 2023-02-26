@@ -53,7 +53,7 @@ const SiliconDays = () => {
               alt={''}
               width={450}
               height={450}
-              className="mt-4 sm:mt-5 w-8/12 sm:w-1/4	"
+              className="mt-4 sm:mt- w-8/12 sm:w-1/4	"
             ></Image>
             <h2 className="text-center text-2xl sm:text-3xl font-bold text-white drop-shadow-lg shadow-black mt-4">
               24 mars 2023
