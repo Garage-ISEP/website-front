@@ -2,7 +2,7 @@ import { GlobalContext } from '@/Contexts/GlobalContext/GlobalContext';
 import Image from 'next/image';
 import { useContext } from 'react';
 import { CustomButton } from '../controls/Button/CustomButton';
-import { Header } from '../Header/Header';
+import { Header } from '../Header/header';
 
 export const HeroSection = () => {
   const { goToPath, goToExternalUrl } = useContext(GlobalContext);
