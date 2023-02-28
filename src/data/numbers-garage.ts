@@ -8,7 +8,7 @@ export interface NumberGarageModel {
 export const numbersGarage: NumberGarageModel[] = [
   {
     id: 0,
-    value: '+70',
+    value: '+80',
     name: 'Garagistes',
     description: "prêts à innover et faire vivre l'association.",
   },

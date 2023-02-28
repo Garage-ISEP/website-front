@@ -15,7 +15,7 @@ export const GarageSection = () => {
           height={310}
         ></Image>
         <h1 className="font-bold text-white text-2xl sm:text-3xl mt-4 text-center sm:text-left">
-          Garage ISEP - Inovation Hub
+          Garage ISEP - Innovation Hub
         </h1>
         <p className="mt-4 sm:mt-10 mb-6 sm:mb-10 text-white text-lg sm:text-xl text-center sm:text-left">
           Garage ISEP est l’association étudiante de l’Isep centrée sur

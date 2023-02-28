@@ -10,7 +10,7 @@ export default function Home() {
       <Head>
         <title>Garage ISEP</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Garage ISEP - Inovation HUB" />
+        <meta name="description" content="Garage ISEP - Innovation HUB" />
       </Head>
       <>
         <HeroSection />
