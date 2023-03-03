@@ -13,13 +13,13 @@ export const GaragePartnersSection = () => {
   return (
     <>
       {mounted && (
-        <section className="">
+        <section>
           <div className="grid place-items-center">
-            <h1 className="mt-10 sm:mb-10 text-4xl font-bold">
+            <h1 className="mt-10 sm:mb-12 text-4xl font-bold">
               Nos partenaires
             </h1>
             {!isMobile || partners.length == 1 ? (
-              <div className="sm:flex sm:flex-wrap sm:gap-8 justify-center sm:w-11/12 xl:w-10/12 2xl:w-9/12 mb-10 mt-5 sm:mt-0 sm:mb-20">
+              <div className=" sm:flex sm:flex-wrap sm:gap-8 justify-center sm:w-11/12 xl:w-10/12 2xl:w-9/12 mb-10 mt-5 sm:mt-0 sm:mb-20 ">
                 {partners.map((partner) => (
                   <Image
                     src={`/images/partners/${partner.image}`}
@@ -27,6 +27,7 @@ export const GaragePartnersSection = () => {
                     key={partner.id}
                     width={250}
                     height={250}
+                    className="h-28 object-contain	mb-10 sm:mb-0"
                   />
                 ))}
               </div>
@@ -87,13 +88,14 @@ export const GaragePartnersSection = () => {
                   {partners.map((partner: PartnersModel) => (
                     <div
                       key={partner.id}
-                      className="flex h-full items-center justify-center  dark:text-white"
+                      className="flex h-10 items-center justify-center  dark:text-white w-6"
                     >
                       <Image
                         src={`/images/partners/${partner.image}`}
                         alt={partner.alt || ''}
                         width={250}
                         height={250}
+                        className="h-28 object-contain	"
                       />
                     </div>
                   ))}
