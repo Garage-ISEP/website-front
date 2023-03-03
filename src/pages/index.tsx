@@ -3,6 +3,7 @@ import { GarageSection } from '@/components/GarageSection/GarageSection';
 import { GarageNumberSection } from '@/components/NumberSection/NumberSection';
 import { HeroSection } from '@/components/HeroSection/HeroSection';
 import Head from 'next/head';
+import { GaragePartnersSection } from '@/components/PartnersSection/PartnersSection';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <GarageSection />
         <GarageNumberSection />
         <ContactSection />
+        <GaragePartnersSection />
       </>
     </>
   );

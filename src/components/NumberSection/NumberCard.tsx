@@ -9,7 +9,7 @@ interface Props {
 
 export const NumberCard: FC<Props> = ({ value, name, desciption }) => {
   return (
-    <div className="grid place-items-center p-2 sm:p-6 transition-all duration-150 bg-white rounded-lg shadow-xl ease hover:shadow-2xl">
+    <div className="grid place-items-center p-2 sm:p-6 transition-all duration-150 bg-white rounded shadow-xl ease hover:shadow-2xl">
       <div className="relative inline-flex items-center justify-center  h-14 overflow-hidden text-white rounded-full">
         <span className="text-2xl text-blue-500 font-bold">{value}</span>
       </div>
