@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+import { GlobalContext } from '@/Contexts/GlobalContext/GlobalContext';
 import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FC, useEffect, useState } from 'react';
+import { FC, useContext, useEffect, useState } from 'react';
 
 interface Props {
   logo?: string;
@@ -22,13 +23,7 @@ export const Header: FC<Props> = ({
   logoMobile,
   linkPushed,
 }) => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    if (/Android|iPhone/i.test(navigator.userAgent)) {
-      setIsMobile(true);
-    } else setIsMobile(false);
-  }, []);
+  const { isMobile } = useContext(GlobalContext);
 
   return (
     <header
