@@ -49,7 +49,7 @@ export const HeroSection = () => {
             </svg>
             <span className="">Garage ISEP 2022/2023 - Innovation Hub</span>
           </p>
-          <div className="container relative max-w-3xl mx-auto lg:mt-32 2xl:mt-0 md:mt-1.5">
+          <div className="container relative max-w-3xl mx-auto lg:mt-2 2xl:mt-0 md:mt-1.5">
             <Image
               className="mx-auto object-cover w-64 sm:w-96 h-20 sm:h-24 sm:my-6"
               src="https://cdn.devdojo.com/tails/images/Rr6NVQ53bPUG7zZyIrHIL49GH36GaQEzHb1aCZ9x.svg"
