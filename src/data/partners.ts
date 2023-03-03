@@ -17,12 +17,22 @@ export const partners: PartnersModel[] = [
   },
   {
     id: 2,
-    image: 'RATP.png',
-    alt: 'RATP',
+    image: 'Ledger_logo.png',
+    alt: 'Ledger',
   },
   {
     id: 3,
-    image: 'Ledger_logo.png',
-    alt: 'Ledger',
+    image: 'ISEP_A.png',
+    alt: 'ISEP Alumni',
+  },
+  {
+    id: 4,
+    image: 'Capgemini_logo.png',
+    alt: 'Capgemini',
+  },
+  {
+    id: 5,
+    image: 'Vivatech_logo.png',
+    alt: 'ISEP Alumni',
   },
 ];

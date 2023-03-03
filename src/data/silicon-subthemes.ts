@@ -11,7 +11,6 @@ export const siliconSubThemes: SiliconSubThemesModel[] = [
   {
     id: 1,
     name: 'Le transport de demain',
-    company: 'RATP',
     description:
       "Utiliser la technologie pour améliorer la durabilité et la connectivité des moyens de transport afin de réduire l'empreinte environnementale.",
     icon: 'train.png',
