@@ -26,7 +26,7 @@ export const ContactSection = () => {
           <p className="text-center  mt-5 text-[#D5D5D5] mr-4 ml-4">
             Pour ne rien rater de notre actualité ou nous contacter
           </p>
-          <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 mx-44" />
+          <hr className="h-px my-6 sm:my-8 bg-gray-200 border-0 dark:bg-gray-700 mx-44" />
           <div className="grid place-items-center sm:flex sm:mt-10 px-8 pb-3  ">
             <a
               className="grid place-items-center w-1/3 font-bold mb-4 sm:mb-0 hover:text-[#D5D5D5]"

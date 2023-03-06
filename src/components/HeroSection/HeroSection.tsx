@@ -67,7 +67,7 @@ export const HeroSection = () => {
               hackathon organisé par le Garage ISEP Innovation Hub !
             </p>
           </div>
-          <div className="relative flex justify-center max-w-3xl mx-auto mt-3 sm:mt-10">
+          <div className="relative flex justify-center max-w-3xl mx-auto mt-6 sm:mt-10 pb-20 sm:pb-0">
             <div className="inline-block w-full overflow-hidden font-mono font-medium text-white bg-white rounded-lg shadow-sm bg-opacity-10 text-sm sm:text-base">
               <div className="flex items-center w-full h-12 pl-4 bg-transparent opacity-80">
                 <div className="flex space-x-1.5">
@@ -76,7 +76,7 @@ export const HeroSection = () => {
                   <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-400 rounded-full"></div>
                 </div>
               </div>
-              <div className="px-5 pt-0 sm:pt-1 pb-5 mb-14 sm:mb-0 md:pt-1 sm:m-0">
+              <div className="px-5 pt-0 sm:pt-1 pb-5  sm:mb-0 md:pt-1 sm:m-0">
                 <p className="">$ sudo silicon_days_2023</p>
                 <p className="mt-1 sm:mt-4">
                   Silicon Days [Version 1.0]<br></br>2023 Garage ISEP<br></br>{' '}
@@ -94,14 +94,14 @@ export const HeroSection = () => {
                         'https://form.jotform.com/230302121540333'
                       )
                     }
-                    className="w-2/3 sm:w-auto bg-blue-600 hover:bg-blue-700 mr-5 mb-2"
+                    className="w-2/3 max-[400px]:w-3/4 sm:w-auto bg-blue-600 hover:bg-blue-700 mr-5 mb-2"
                   >
                     Inscriptions
                   </CustomButton>
 
                   <CustomButton
                     onClick={() => goToPath('/silicon-days')}
-                    className="w-2/3 sm:w-auto bg-blue-600 hover:bg-blue-700"
+                    className="w-2/3 max-[400px]:w-3/4 sm:w-auto bg-blue-600 hover:bg-blue-700"
                   >
                     En savoir plus
                   </CustomButton>
