@@ -44,7 +44,7 @@ const SiliconDays = () => {
             <Header
               logo={'/g-logo-h-w.svg'}
               pushedEvent={"L'association"}
-              className="mt-3 sm:mt-5"
+              className="mt-3 sm:mt-5 w-10/12"
               logoMobile={'/images/logo-white.png'}
               linkPushed={'/#GarageISEP'}
             />
