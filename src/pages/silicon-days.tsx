@@ -11,6 +11,7 @@ import { CustomButton } from '@/components/controls/Button/CustomButton';
 import { SiliconCalendar } from '@/components/SiliconCalendar/SiliconCalendar';
 import { Header } from '@/components/Header/header';
 import { useEffect, useState } from 'react';
+import { LayoutAnimations } from '@/components/Animations/LayoutAnimations/LayoutAnimations';
 
 const SiliconDays = () => {
   const [isMobile, setIsMobile] = useState(false);

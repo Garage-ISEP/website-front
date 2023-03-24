@@ -3,6 +3,7 @@ import Head from 'next/head';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { AppFooter } from '@/components/AppFooter/AppFooter';
+import { PagesAnimations } from '@/components/Animations/PagesAnimations/PagesAnimations';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -17,10 +18,12 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>{' '}
       <GlobalState>
         <div className="bg-gray-100">
-          <Component {...pageProps} />
+          <PagesAnimations>
+            <Component {...pageProps} />
+          </PagesAnimations>
           <AppFooter />
         </div>
-      </GlobalState>{' '}
+      </GlobalState>
     </>
   );
 }
