@@ -18,9 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>{' '}
       <GlobalState>
         <div className="bg-gray-100">
-          <PagesAnimations>
-            <Component {...pageProps} />
-          </PagesAnimations>
+          <Component {...pageProps} />
           <AppFooter />
         </div>
       </GlobalState>

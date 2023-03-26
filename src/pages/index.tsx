@@ -4,7 +4,6 @@ import { GarageNumberSection } from '@/components/NumberSection/NumberSection';
 import { HeroSection } from '@/components/HeroSection/HeroSection';
 import Head from 'next/head';
 import { GaragePartnersSection } from '@/components/PartnersSection/PartnersSection';
-import { LayoutAnimations } from '@/components/Animations/LayoutAnimations/LayoutAnimations';
 
 export default function Home() {
   return (
