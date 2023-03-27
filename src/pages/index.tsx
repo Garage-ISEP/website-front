@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {labs} from "@/components/labs/lab";
+import { AffichageLabs } from '@/components/labs/lab'
 export default function Home() {
   return (
     <>
@@ -10,6 +10,9 @@ export default function Home() {
         <link rel="icon" href="/Garage-logo.svg" />
       </Head>
       <h1 className="text-4xl font-bold">Garage ISEP Website </h1>
+      <div>
+        <AffichageLabs/>
+      </div>
     </>
   )
 }
