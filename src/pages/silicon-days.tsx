@@ -5,14 +5,21 @@ import {
   siliconSubThemes,
 } from '@/data/silicon-subthemes';
 import { SiliconCalendarModel, siliconCalendar } from '@/data/calendar-silicon';
-import { Carousel } from 'flowbite-react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { CustomButton } from '@/components/controls/Button/CustomButton';
 import { SiliconCalendar } from '@/components/SiliconCalendar/SiliconCalendar';
-import { Header } from '@/components/Header/Header';
+import { Header } from '@/components/Header/header';
+import { useEffect, useState } from 'react';
 
 const SiliconDays = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (/Android|iPhone/i.test(navigator.userAgent)) {
+      setIsMobile(true);
+    } else setIsMobile(false);
+  }, []);
   return (
     <>
       <Head>
@@ -37,7 +44,7 @@ const SiliconDays = () => {
             <Header
               logo={'/g-logo-h-w.svg'}
               pushedEvent={"L'association"}
-              className="mt-5"
+              className="mt-3 sm:mt-5 w-10/12"
               logoMobile={'/images/logo-white.png'}
               linkPushed={'/#GarageISEP'}
             />
@@ -46,31 +53,27 @@ const SiliconDays = () => {
               alt={''}
               width={450}
               height={450}
-              className="mt-10 w-10/12 sm:w-1/4	"
+              className="mt-4 sm:mt- w-8/12 sm:w-1/4	"
             ></Image>
-            <h2 className="text-center text-4xl font-bold text-white drop-shadow-lg shadow-black mt-4">
+            <h2 className="text-center text-2xl sm:text-3xl font-bold text-white drop-shadow-lg shadow-black mt-4">
               24 mars 2023
             </h2>
             <a href="https://garageisep.com" target="_blank" rel="noreferrer">
               <Image
                 src="/images/logo-h-white.png"
                 alt={'Logo Garage'}
-                width={250}
+                width={isMobile ? 220 : 240}
                 height={250}
-                className="flex justify-center mr-1 mt-3 mb-4"
+                className="flex justify-center mr-1 mt-2 mb-4"
               ></Image>
             </a>
-            <h2 className=" text-center text-4xl font-bold text-white drop-shadow-lg shadow-black mb-3">
+            <h2 className=" text-center text-2xl sm:text-3xl font-bold text-white drop-shadow-lg shadow-black mb-3">
               Allons chercher l&apos;innovation
             </h2>
-            <p className="text-center font-bold text-white text-xl w-10/12 sm:w-4/5 xl:w-2/5">
-              Vous êtes passionnés de technologie et souhaitez relever des défis
-              innovants ? Rejoignez-nous aux prochains Silicon Days, un
-              hackathon organisé par Garage Isep ! Le thème de cette édition est
-              &quot;Tech for Good&quot;, vous permettant ainsi de découvrir aux
-              côtés d&apos;enterprises innovantes les dernières tendances en
-              matière de technologie pour accélérer la transition vers une
-              société plus durable et responsable.
+            <p className="text-center font-bold text-white text-base sm:text-lg w-10/12 sm:w-4/5 xl:w-2/5">
+              {isMobile
+                ? 'Vous êtes passionnés de technologie et souhaitez relever des défis innovants ? Rejoignez-nous aux prochains Silicon Days, un hackathon sur le thème de la "Tech for Good" organisé par Garage Isep !'
+                : 'Vous êtes passionnés de technologie et souhaitez relever des défis innovants ? Rejoignez-nous aux prochains Silicon Days, un hackathon organisé par Garage Isep ! Le thème de cette édition est "Tech for Good", vous permettant ainsi de découvrir aux côtés d\'enterprises innovantes les dernières tendances en matière de technologie pour accélérer la transition vers une société plus durable et responsable.'}
             </p>
             <CustomButton
               onClick={() =>
