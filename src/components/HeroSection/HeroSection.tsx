@@ -1,9 +1,9 @@
 import { GlobalContext } from '@/Contexts/GlobalContext/GlobalContext';
 import Image from 'next/image';
 import { useContext } from 'react';
-import { AnimationSide } from '../Animations/AnimationSide/AnimationSide';
 import { CustomButton } from '../controls/Button/CustomButton';
 import { Header } from '../Header/header';
+import { ApparitionAnimation } from '../Animations/ApparitionAnimation/ApparitionAnimation';
 
 export const HeroSection = () => {
   const { goToPath, goToExternalUrl } = useContext(GlobalContext);
@@ -50,7 +50,7 @@ export const HeroSection = () => {
             </svg>
             <span className="">Garage ISEP 2022/2023 - Innovation Hub</span>
           </p>
-          <div className="container relative max-w-3xl mx-auto lg:mt-2 2xl:mt-0 md:mt-1.5">
+          <ApparitionAnimation classNames="container relative max-w-3xl mx-auto lg:mt-2 2xl:mt-0 md:mt-1.5">
             <Image
               className="mx-auto object-cover w-64 sm:w-96 h-20 sm:h-24 sm:my-6"
               src="https://cdn.devdojo.com/tails/images/Rr6NVQ53bPUG7zZyIrHIL49GH36GaQEzHb1aCZ9x.svg"
@@ -67,9 +67,9 @@ export const HeroSection = () => {
               défis innovants ? Rejoignez-nous aux prochains Silicon Days, un
               hackathon organisé par le Garage ISEP Innovation Hub !
             </p>
-          </div>
+          </ApparitionAnimation>
           <div className="relative flex justify-center max-w-3xl mx-auto mt-6 sm:mt-10 pb-20 sm:pb-0">
-            <AnimationSide classNames="w-full">
+            <ApparitionAnimation classNames="w-full">
               <div className="inline-block w-full overflow-hidden font-mono font-medium text-white bg-white rounded-lg shadow-sm bg-opacity-10 text-sm sm:text-base">
                 <div className="flex items-center w-full h-12 pl-4 bg-transparent opacity-80">
                   <div className="flex space-x-1.5">
@@ -111,7 +111,7 @@ export const HeroSection = () => {
                 </div>
                 {/*<div className="tails-hover-element"></div></div>*/}
               </div>
-            </AnimationSide>
+            </ApparitionAnimation>
           </div>
         </div>
       </div>
