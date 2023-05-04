@@ -11,6 +11,7 @@ import { CustomButton } from '@/components/controls/Button/CustomButton';
 import { SiliconCalendar } from '@/components/SiliconCalendar/SiliconCalendar';
 import { Header } from '@/components/Header/header';
 import { useEffect, useState } from 'react';
+import { ApparitionAnimation } from '@/components/Animations/ApparitionAnimation/ApparitionAnimation';
 
 const SiliconDays = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -48,44 +49,46 @@ const SiliconDays = () => {
               logoMobile={'/images/logo-white.png'}
               linkPushed={'/#GarageISEP'}
             />
-            <Image
-              src={'/images/SiliconDays.png'}
-              alt={''}
-              width={450}
-              height={450}
-              className="mt-4 sm:mt- w-8/12 sm:w-1/4	"
-            ></Image>
-            <h2 className="text-center text-2xl sm:text-3xl font-bold text-white drop-shadow-lg shadow-black mt-4">
-              24 mars 2023
-            </h2>
-            <a href="https://garageisep.com" target="_blank" rel="noreferrer">
+            <ApparitionAnimation classNames="grid place-items-center">
               <Image
-                src="/images/logo-h-white.png"
-                alt={'Logo Garage'}
-                width={isMobile ? 220 : 240}
-                height={250}
-                className="flex justify-center mr-1 mt-2 mb-4"
+                src={'/images/SiliconDays.png'}
+                alt={''}
+                width={450}
+                height={450}
+                className="mt-4 sm:mt- w-8/12 sm:w-1/4	"
               ></Image>
-            </a>
-            <h2 className=" text-center text-2xl sm:text-3xl font-bold text-white drop-shadow-lg shadow-black mb-3">
-              Allons chercher l&apos;innovation
-            </h2>
-            <p className="text-center font-bold text-white text-base sm:text-lg w-10/12 sm:w-4/5 xl:w-2/5">
-              {isMobile
-                ? 'Vous êtes passionnés de technologie et souhaitez relever des défis innovants ? Rejoignez-nous aux prochains Silicon Days, un hackathon sur le thème de la "Tech for Good" organisé par Garage Isep !'
-                : 'Vous êtes passionnés de technologie et souhaitez relever des défis innovants ? Rejoignez-nous aux prochains Silicon Days, un hackathon organisé par Garage Isep ! Le thème de cette édition est "Tech for Good", vous permettant ainsi de découvrir aux côtés d\'enterprises innovantes les dernières tendances en matière de technologie pour accélérer la transition vers une société plus durable et responsable.'}
-            </p>
-            <CustomButton
-              onClick={() =>
-                window.open(
-                  'https://form.jotform.com/230302121540333',
-                  '_blank'
-                )
-              }
-              className="bg-blue-600 px-8 mt-8 hover:bg-blue-700"
-            >
-              Rejoindre
-            </CustomButton>
+              <h2 className="text-center text-2xl sm:text-3xl font-bold text-white drop-shadow-lg shadow-black mt-4">
+                24 mars 2023
+              </h2>
+              <a href="https://garageisep.com" target="_blank" rel="noreferrer">
+                <Image
+                  src="/images/logo-h-white.png"
+                  alt={'Logo Garage'}
+                  width={isMobile ? 220 : 240}
+                  height={250}
+                  className="flex justify-center mr-1 mt-2 mb-4"
+                ></Image>
+              </a>
+              <h2 className=" text-center text-2xl sm:text-3xl font-bold text-white drop-shadow-lg shadow-black mb-3">
+                Allons chercher l&apos;innovation
+              </h2>
+              <p className="text-center font-bold text-white text-base sm:text-lg w-10/12 sm:w-4/5 xl:w-2/5">
+                {isMobile
+                  ? 'Vous êtes passionnés de technologie et souhaitez relever des défis innovants ? Rejoignez-nous aux prochains Silicon Days, un hackathon sur le thème de la "Tech for Good" organisé par Garage Isep !'
+                  : 'Vous êtes passionnés de technologie et souhaitez relever des défis innovants ? Rejoignez-nous aux prochains Silicon Days, un hackathon organisé par Garage Isep ! Le thème de cette édition est "Tech for Good", vous permettant ainsi de découvrir aux côtés d\'enterprises innovantes les dernières tendances en matière de technologie pour accélérer la transition vers une société plus durable et responsable.'}
+              </p>
+              <CustomButton
+                onClick={() =>
+                  window.open(
+                    'https://form.jotform.com/230302121540333',
+                    '_blank'
+                  )
+                }
+                className="bg-blue-600 px-8 mt-8 hover:bg-blue-700"
+              >
+                Rejoindre
+              </CustomButton>
+            </ApparitionAnimation>
             <hr className="w-4/5 lg:w-3/5 xl:w-1/2 2xl:w-2/5 h-px h-1 my-8 bg-white border-0 rounded md:my-12" />
             {/* TODO : Caroussel pour la version mobile */}
             {siliconSubThemes.map((o: SiliconSubThemesModel) => (

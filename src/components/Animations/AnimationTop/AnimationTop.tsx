@@ -24,12 +24,12 @@ export const AnimationTop: FC<Props> = ({
           y: 0,
           transition: {
             type: 'spring',
-            duration: 1,
+            duration: 1.1,
             bounce: 0.4,
           },
         });
         setAnimationPlayed(true);
-      } else animation.start({ y: 150 });
+      } else animation.start({ y: 200 });
     }
   }, [inView, animationPlayed, animation]);
   return (

@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import Image from 'next/image';
 import { AnimationSide } from '../Animations/AnimationSide/AnimationSide';
+import { ApparitionAnimation } from '../Animations/ApparitionAnimation/ApparitionAnimation';
 
 export const ContactSection = () => {
   return (
@@ -13,7 +14,7 @@ export const ContactSection = () => {
           'grid place-items-center mb-16'
         )}
       >
-        <AnimationSide classNames="mt-20 bg-[#3D4242] w-10/12 sm:w-4/5 md:sm-2/3 lg:w-1/2 rounded py-8 text-white sm:px-5 drop-shadow-xl">
+        <ApparitionAnimation classNames="mt-20 bg-[#3D4242] w-10/12 sm:w-4/5 md:sm-2/3 lg:w-1/2 rounded py-8 text-white sm:px-5 drop-shadow-xl">
           <div
             className={classNames({
               /*'sm:mt-40 sm:translate-y-48'*/
@@ -74,7 +75,7 @@ export const ContactSection = () => {
               </a>
             </div>
           </div>
-        </AnimationSide>
+        </ApparitionAnimation>
       </div>
     </section>
   );
