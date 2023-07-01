@@ -5,7 +5,13 @@ import { HeroSection } from '@/components/HeroSection/HeroSection';
 import Head from 'next/head';
 import { GaragePartnersSection } from '@/components/PartnersSection/PartnersSection';
 
-export default function Home() {
+interface Props {
+  labs: any;
+  partners: any;
+  numbers: any;
+}
+
+export default function Home({ labs, partners, numbers }: Props) {
   return (
     <>
       <Head>
@@ -22,4 +28,34 @@ export default function Home() {
       </>
     </>
   );
+}
+
+export async function getServerSideProps() {
+  try {
+    let responseLabs = await fetch(
+      (process.env.API_URL || 'https://garageisep.com/') +
+        '/api/labs/getAllLabs'
+    );
+    let labs = await responseLabs.json();
+    let responsePartners = await fetch(
+      (process.env.API_URL || 'https://garageisep.com/') +
+        '/api/partners/getAllPartners'
+    );
+    let partners = await responsePartners.json();
+    let responseNumbers = await fetch(
+      (process.env.API_URL || 'https://garageisep.com/') +
+        '/api/numbers/getAllNumbers'
+    );
+    let numbers = await responseNumbers.json();
+    return {
+      props: {
+        labs: JSON.parse(JSON.stringify(labs)),
+        partners: JSON.parse(JSON.stringify(partners)),
+        numbers: JSON.parse(JSON.stringify(numbers)),
+      },
+    };
+  } catch (e) {
+    console.log(e);
+    return { props: e };
+  }
 }
