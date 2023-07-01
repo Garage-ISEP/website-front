@@ -13,6 +13,13 @@ let clientPromise: Promise<MongoClient>;
 if (!process.env.MONGODB_URL) {
   throw new Error('Please add your Mongo URI to .env.local');
 }
+declare global {
+  namespace NodeJS {
+    interface Global {
+      _mongoClientPromise?: Promise<MongoClient>;
+    }
+  }
+}
 
 if (process.env.NODE_ENV === 'development') {
   if (!global._mongoClientPromise) {
@@ -21,7 +28,6 @@ if (process.env.NODE_ENV === 'development') {
   }
   clientPromise = global._mongoClientPromise;
 } else {
-  // In production mode, it's best to not use a global variable.
   client = new MongoClient(uri, options);
   clientPromise = client.connect();
 }
