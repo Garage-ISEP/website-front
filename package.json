@@ -21,9 +21,11 @@
     "flowbite": "^1.6.3",
     "flowbite-react": "^0.3.7",
     "mongodb": "^5.6.0",
+    "framer-motion": "^10.6.1",
     "next": "13.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-intersection-observer": "^9.4.3",
     "typescript": "4.9.4"
   },
   "devDependencies": {

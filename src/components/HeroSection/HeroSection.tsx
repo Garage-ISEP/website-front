@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useContext } from 'react';
 import { CustomButton } from '../controls/Button/CustomButton';
 import { Header } from '../Header/header';
+import { ApparitionAnimation } from '../Animations/ApparitionAnimation/ApparitionAnimation';
 
 export const HeroSection = () => {
   const { goToPath, goToExternalUrl } = useContext(GlobalContext);
@@ -49,7 +50,7 @@ export const HeroSection = () => {
             </svg>
             <span className="">Garage ISEP 2022/2023 - Innovation Hub</span>
           </p>
-          <div className="container relative max-w-3xl mx-auto lg:mt-2 2xl:mt-0 md:mt-1.5">
+          <ApparitionAnimation classNames="container relative max-w-3xl mx-auto lg:mt-2 2xl:mt-0 md:mt-1.5">
             <Image
               className="mx-auto object-cover w-64 sm:w-96 h-20 sm:h-24 sm:my-6"
               src="https://cdn.devdojo.com/tails/images/Rr6NVQ53bPUG7zZyIrHIL49GH36GaQEzHb1aCZ9x.svg"
@@ -66,49 +67,51 @@ export const HeroSection = () => {
               défis innovants ? Rejoignez-nous aux prochains Silicon Days, un
               hackathon organisé par le Garage ISEP Innovation Hub !
             </p>
-          </div>
+          </ApparitionAnimation>
           <div className="relative flex justify-center max-w-3xl mx-auto mt-6 sm:mt-10 pb-20 sm:pb-0">
-            <div className="inline-block w-full overflow-hidden font-mono font-medium text-white bg-white rounded-lg shadow-sm bg-opacity-10 text-sm sm:text-base">
-              <div className="flex items-center w-full h-12 pl-4 bg-transparent opacity-80">
-                <div className="flex space-x-1.5">
-                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-red-400 rounded-full"></div>
-                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-400 rounded-full"></div>
-                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-400 rounded-full"></div>
+            <ApparitionAnimation classNames="w-full">
+              <div className="inline-block w-full overflow-hidden font-mono font-medium text-white bg-white rounded-lg shadow-sm bg-opacity-10 text-sm sm:text-base">
+                <div className="flex items-center w-full h-12 pl-4 bg-transparent opacity-80">
+                  <div className="flex space-x-1.5">
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 bg-red-400 rounded-full"></div>
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-400 rounded-full"></div>
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-400 rounded-full"></div>
+                  </div>
                 </div>
-              </div>
-              <div className="px-5 pt-0 sm:pt-1 pb-5  sm:mb-0 md:pt-1 sm:m-0">
-                <p className="">$ sudo silicon_days_2023</p>
-                <p className="mt-1 sm:mt-4">
-                  Silicon Days [Version 1.0]<br></br>2023 Garage ISEP<br></br>{' '}
-                </p>
-                <p className="">
-                  <br></br>Loading ideas...Ready to Deploy 🚀
-                </p>
-                <p className="flex items-center mx-auto md:mx-0 md:pb-3">
-                  $ Enter Your Name: [...]
-                </p>
-                <div className="mt-5 ">
-                  <CustomButton
-                    onClick={() =>
-                      goToExternalUrl(
-                        'https://form.jotform.com/230302121540333'
-                      )
-                    }
-                    className="w-2/3 max-[400px]:w-3/4 sm:w-auto bg-blue-600 hover:bg-blue-700 mr-5 mb-2"
-                  >
-                    Inscriptions
-                  </CustomButton>
+                <div className="px-5 pt-0 sm:pt-1 pb-5  sm:mb-0 md:pt-1 sm:m-0">
+                  <p className="">$ sudo silicon_days_2023</p>
+                  <p className="mt-1 sm:mt-4">
+                    Silicon Days [Version 1.0]<br></br>2023 Garage ISEP<br></br>{' '}
+                  </p>
+                  <p className="">
+                    <br></br>Loading ideas...Ready to Deploy 🚀
+                  </p>
+                  <p className="flex items-center mx-auto md:mx-0 md:pb-3">
+                    $ Enter Your Name: [...]
+                  </p>
+                  <div className="mt-5 ">
+                    <CustomButton
+                      onClick={() =>
+                        goToExternalUrl(
+                          'https://form.jotform.com/230302121540333'
+                        )
+                      }
+                      className="w-2/3 max-[400px]:w-3/4 sm:w-auto bg-blue-600 hover:bg-blue-700 mr-5 mb-2"
+                    >
+                      Inscriptions
+                    </CustomButton>
 
-                  <CustomButton
-                    onClick={() => goToPath('/silicon-days')}
-                    className="w-2/3 max-[400px]:w-3/4 sm:w-auto bg-blue-600 hover:bg-blue-700"
-                  >
-                    En savoir plus
-                  </CustomButton>
+                    <CustomButton
+                      onClick={() => goToPath('/silicon-days')}
+                      className="w-2/3 max-[400px]:w-3/4 sm:w-auto bg-blue-600 hover:bg-blue-700"
+                    >
+                      En savoir plus
+                    </CustomButton>
+                  </div>
                 </div>
+                {/*<div className="tails-hover-element"></div></div>*/}
               </div>
-              {/*<div className="tails-hover-element"></div></div>*/}
-            </div>
+            </ApparitionAnimation>
           </div>
         </div>
       </div>
