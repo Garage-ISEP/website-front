@@ -7,12 +7,13 @@ if (!process.env.MONGODB_URL) {
 const uri = process.env.MONGODB_URL;
 const options = {};
 
-let client;
+let client: MongoClient;
 let clientPromise: Promise<MongoClient>;
 
 if (!process.env.MONGODB_URL) {
   throw new Error('Please add your Mongo URI to .env.local');
 }
+
 declare global {
   namespace NodeJS {
     interface Global {
