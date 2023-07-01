@@ -12,7 +12,6 @@ interface Props {
 }
 
 export default function Home({ labs, partners, numbers }: Props) {
-  console.log(numbers);
   return (
     <>
       <Head>
