@@ -6,6 +6,7 @@ interface GlobalContextType {
   goToExternalUrl: (url: string) => void;
   getPath: () => string;
   isMobile: boolean;
+  /*isValidRoute: boolean;*/
 }
 
 export const GlobalContext = createContext<GlobalContextType>(
