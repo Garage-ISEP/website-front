@@ -1,13 +1,11 @@
-import { Link } from "react-router-dom";
-
-
 const PageNotFound= () =>{
     return(
         <div>
             <h1>Désolé, Garage n'a pas réussi à trouver ta page!!</h1>
             <p>Voici un lien pour retourner à l'accueil</p> 
-            <Link to='/'>Page d'accueil</Link>
-            <Link to='/silicon-days'>Silicon days</Link>
+            <a href='/'>Page d'accueil</a>
+            <p></p>
+            <a href='/silicon-days'>Silicon days</a>
             
         </div>
         

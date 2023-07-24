@@ -25,7 +25,7 @@ export const GlobalState: FC<Props> = ({ children }) => {
     } else setIsMobile(false);
   }, []);
 
-  {/*
+  
   useEffect(() => {
     if (typeof window !== 'undefined') {
       if (!validRoutes.includes(path)) {
@@ -33,7 +33,7 @@ export const GlobalState: FC<Props> = ({ children }) => {
       }
     }
   }, [path]);
-*/}
+
   const goToPath = (path: string) => {
     router.push(path);
   };
