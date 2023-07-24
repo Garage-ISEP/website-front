@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { FC, useEffect, useState } from 'react';
 import { GlobalContext } from './GlobalContext';
-import PageNotFound from '@/pages/not-found';
+
 
 interface Props {
   children: React.ReactNode;
@@ -16,6 +16,7 @@ export const GlobalState: FC<Props> = ({ children }) => {
     '/silicon-days',
     '/#contact',
     '/',
+    '/not-found'
   ];
 
   useEffect(() => {
@@ -24,13 +25,15 @@ export const GlobalState: FC<Props> = ({ children }) => {
     } else setIsMobile(false);
   }, []);
 
-  
+  {/*
   useEffect(() => {
-    if (!validRoutes.includes(path)){
-      router.push('/not-found');
+    if (typeof window !== 'undefined') {
+      if (!validRoutes.includes(path)) {
+        router.push('/not-found');
+      }
     }
-  },[path]);
-
+  }, [path]);
+*/}
   const goToPath = (path: string) => {
     router.push(path);
   };
@@ -44,6 +47,7 @@ export const GlobalState: FC<Props> = ({ children }) => {
     return router.pathname;
   };
 
+  
   return (
     <GlobalContext.Provider
       value={{ path, goToPath, goToExternalUrl, getPath, isMobile}}
