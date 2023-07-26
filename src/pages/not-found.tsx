@@ -3,7 +3,7 @@ import React from "react";
 
 const PageNotFound= () =>{
     return(
-        <div>
+        <div style={{ backgroundImage: "url(/mascotteIsep.jpg)" }}>
             <h1>Désolé, Garage n'a pas réussi à trouver ta page!!</h1>
             <p>Voici un lien pour retourner à l'accueil</p> 
             <a href='/'>Page d'accueil</a>
