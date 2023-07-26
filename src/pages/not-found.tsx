@@ -1,3 +1,6 @@
+import React from "react";
+
+
 const PageNotFound= () =>{
     return(
         <div>
@@ -6,7 +9,6 @@ const PageNotFound= () =>{
             <a href='/'>Page d'accueil</a>
             <p></p>
             <a href='/silicon-days'>Silicon days</a>
-            
         </div>
         
     )
