@@ -6,25 +6,4 @@ body {
   font-family: century gothic, sans-serif;
 }
 
-section h1, section img, section p{
-  display: inline-block;
-  font-size: 18px;
-}
-
-section h1{
-  margin-left: 25px;
-  margin-right: 20px;
-}
-section img{
-  margin-left: 15px;
-  margin-right: 50px;
-}
-.droite{
-  text-align: right;
-}
-
-.gauche{
-  text-align: left;
-  width : 8%;
-}
 
