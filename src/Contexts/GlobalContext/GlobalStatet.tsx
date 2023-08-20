@@ -16,7 +16,7 @@ export const GlobalState: FC<Props> = ({ children }) => {
     '/silicon-days',
     '/#contact',
     '/',
-    '/not-found'
+    '/404'
   ];
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export const GlobalState: FC<Props> = ({ children }) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       if (!validRoutes.includes(path)) {
-        router.push('/not-found');
+        router.push('/404');
       }
     }
   }, [path]);
