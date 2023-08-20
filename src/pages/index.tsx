@@ -25,14 +25,15 @@ export default function Home({ labs, partners, numbers }: Props) {
         <HeroSection />
         <GarageSection />
         <GarageNumberSection />
+        <AffichageLabs/>
         <ContactSection />
         <GaragePartnersSection />
-        <AffichageLabs/>
+        
       </>
     </>
   )
 }
-
+{/*
 export async function getServerSideProps() {
   try {
     let responseLabs = await fetch(
@@ -62,3 +63,4 @@ export async function getServerSideProps() {
     return { props: e };
   }
 }
+*/}
