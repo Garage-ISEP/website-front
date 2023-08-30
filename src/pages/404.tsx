@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-//mettre erreur 404 en texte
 const PageNotFound= () =>{
     const [isMobile, setIsMobile] = useState(false);
 
