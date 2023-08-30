@@ -1,8 +1,23 @@
-import React from "react";
-import { isMobile } from 'react-device-detect';
+import React, { useState, useEffect } from 'react';
 
 //mettre erreur 404 en texte
 const PageNotFound= () =>{
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+        const windowWidth = window.innerWidth;
+        const mobileThreshold = 768;
+
+        setIsMobile(windowWidth < mobileThreshold);
+        };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+    
     if (isMobile) {
         return(
             <div className="grid grid-rows-2  items-center">
