@@ -30,7 +30,7 @@ export default function Home({ labs, partners, numbers }: Props) {
   );
 }
 
-export async function getServerSideProps() {
+/* export async function getServerSideProps() {
   try {
     let responseLabs = await fetch(
       (process.env.API_URL || 'https://garageisep.com/') +
@@ -58,4 +58,4 @@ export async function getServerSideProps() {
     console.log(e);
     return { props: e };
   }
-}
+} */
