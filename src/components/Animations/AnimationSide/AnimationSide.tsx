@@ -15,7 +15,7 @@ export const AnimationSide: FC<Props> = ({
   thresholdValue,
 }) => {
   const [animationPlayed, setAnimationPlayed] = useState(false);
-  const { ref, inView } = useInView({ threshold: thresholdValue || 0.2 });
+  const { ref, inView } = useInView({ threshold: thresholdValue || 0 });
   const animation = useAnimation();
   const { isMobile } = useContext(GlobalContext);
 
