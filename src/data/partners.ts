@@ -1,13 +1,13 @@
 export interface PartnersModel {
-  id: number;
+  _id: number;
   image: string;
   alt?: string;
 }
-
+/* 
 export const partners: PartnersModel[] = [
   {
     id: 0,
-    image: 'PBW_Talent_Marine.svg',
+    image: "PBW_Talent_Marine.svg",
     alt: 'Paris Blockchain Week - 20 Mars 2023',
   },
   {
@@ -35,4 +35,4 @@ export const partners: PartnersModel[] = [
     image: 'Vivatech_logo.png',
     alt: 'ISEP Alumni',
   },
-];
+];  */

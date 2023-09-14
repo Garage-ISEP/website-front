@@ -12,6 +12,7 @@ interface Props {
 }
 
 export default function Home({ labs, partners, numbers }: Props) {
+  console.log(labs, partners, numbers);
   return (
     <>
       <Head>
@@ -22,9 +23,9 @@ export default function Home({ labs, partners, numbers }: Props) {
       <>
         <HeroSection />
         <GarageSection />
-        <GarageNumberSection />
+        <GarageNumberSection numbers={numbers} />
         <ContactSection />
-        <GaragePartnersSection />
+        <GaragePartnersSection garagePartners={partners} />
       </>
     </>
   );

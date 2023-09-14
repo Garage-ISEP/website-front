@@ -1,9 +1,19 @@
 import { NumberGarageModel, numbersGarage } from '@/data/numbers-garage';
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { AnimationTop } from '../Animations/AnimationTop/AnimationTop';
 import { NumberCard } from './NumberCard';
 
-export const GarageNumberSection: FC = ({}) => {
+interface Props {
+  numbers: any[];
+}
+export const GarageNumberSection: FC<Props> = ({ numbers }) => {
+  const [numbersToDisplay, setNumberToDisplay] = useState(numbersGarage);
+
+  useEffect(() => {
+    if (numbers) setNumberToDisplay(numbers);
+  }, []);
+
+  useEffect(() => {}, []);
   return (
     <section className="pb-10 ">
       <div className="grid place-items-center">
@@ -16,9 +26,9 @@ export const GarageNumberSection: FC = ({}) => {
           {' '}
           <AnimationTop>
             <div className="grid gap-4 grid-cols-2 lg:grid-cols-3 lg:gap-8 last:col-start-2 col-start-1">
-              {numbersGarage.map((number: NumberGarageModel) => (
+              {numbersToDisplay.map((number: NumberGarageModel) => (
                 <NumberCard
-                  key={number.id}
+                  key={number._id}
                   value={number.value}
                   name={number.name}
                   desciption={number.description}

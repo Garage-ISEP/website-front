@@ -1,5 +1,5 @@
 export interface NumberGarageModel {
-  id: number;
+  _id: number;
   value: string;
   name: string;
   description?: string;
@@ -7,38 +7,38 @@ export interface NumberGarageModel {
 
 export const numbersGarage: NumberGarageModel[] = [
   {
-    id: 0,
+    _id: 0,
     value: '+80',
     name: 'Garagistes',
     description: "prêts à innover et faire vivre l'association.",
   },
   {
-    id: 1,
+    _id: 1,
     value: '6',
     name: 'Labs',
     description: 'spécialisés dans différents domaines technologiques.',
   },
   {
-    id: 2,
+    _id: 2,
     value: '+30',
     name: 'Projets',
     description: 'innovants, sur des technologies variées et modernes.',
   },
   {
-    id: 3,
+    _id: 3,
     value: '20',
     name: 'Workshops',
     description: 'par an en moyenne, pour partager nos connaissances !',
   },
   {
-    id: 4,
+    _id: 4,
     value: '2',
     name: 'Panic Night',
     description:
-      'par an, nuits blanches pour aider les étudiants dans leurs projets.',
+      'par an, nuits blanches pour a_ider les étudiants dans leurs projets.',
   },
   {
-    id: 5,
+    _id: 5,
     value: '1',
     name: 'Hackathon',
     description:

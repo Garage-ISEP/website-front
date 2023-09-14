@@ -1,30 +1,36 @@
 import { GlobalContext } from '@/Contexts/GlobalContext/GlobalContext';
-import { partners, PartnersModel } from '@/data/partners';
+import { PartnersModel } from '@/data/partners';
 import { Carousel } from 'flowbite-react';
 import Image from 'next/image';
-import { useContext, useEffect, useState } from 'react';
+import { FC, useContext, useEffect, useState } from 'react';
 
-export const GaragePartnersSection = () => {
+interface Props {
+  garagePartners: PartnersModel[];
+}
+export const GaragePartnersSection: FC<Props> = ({ garagePartners }) => {
   const [mounted, setMounted] = useState(false);
+  const [partnersToDisplay, setPartnersToDisplay] = useState<PartnersModel[]>();
   const { isMobile } = useContext(GlobalContext);
   useEffect(() => {
     setMounted(true);
+    if (garagePartners) setPartnersToDisplay(garagePartners);
   }, []);
+
   return (
     <>
-      {mounted && (
+      {mounted && partnersToDisplay && (
         <section>
           <div className="grid place-items-center">
             <h1 className="mt-10 sm:mb-12 text-4xl font-bold">
               Nos partenaires
             </h1>
-            {!isMobile || partners.length == 1 ? (
+            {!isMobile || partnersToDisplay.length == 1 ? (
               <div className=" sm:flex sm:flex-wrap sm:gap-8 justify-center sm:w-11/12 xl:w-10/12 2xl:w-9/12 mb-10 mt-5 sm:mt-0 sm:mb-20 ">
-                {partners.map((partner) => (
+                {partnersToDisplay.map((partner: PartnersModel) => (
                   <Image
-                    src={`/images/partners/${partner.image}`}
+                    src={`data:image/png;base64,${partner.image}`}
                     alt={partner.alt || ''}
-                    key={partner.id}
+                    key={partner._id}
                     width={250}
                     height={250}
                     className="h-28 object-contain	mb-10 sm:mb-0"
@@ -85,17 +91,17 @@ export const GaragePartnersSection = () => {
                     </div>
                   }
                 >
-                  {partners.map((partner: PartnersModel) => (
+                  {partnersToDisplay.map((partner: PartnersModel) => (
                     <div
-                      key={partner.id}
+                      key={partner._id}
                       className="flex h-10 items-center justify-center  dark:text-white w-6"
                     >
                       <Image
-                        src={`/images/partners/${partner.image}`}
+                        src={`data:image/png;base64,${partner.image}`}
                         alt={partner.alt || ''}
                         width={250}
                         height={250}
-                        className="h-28 object-contain	"
+                        className="h-28 object-contain"
                       />
                     </div>
                   ))}
