@@ -6,7 +6,7 @@ import { Header } from '../Header/header';
 import { ApparitionAnimation } from '../Animations/ApparitionAnimation/ApparitionAnimation';
 
 export const HeroSection = () => {
-  const { goToPath, goToExternalUrl } = useContext(GlobalContext);
+  const { goToPath } = useContext(GlobalContext);
   const year = new Date().getFullYear();
 
   return (
@@ -95,8 +95,9 @@ export const HeroSection = () => {
                   <div className="mt-5 ">
                     <CustomButton
                       onClick={() =>
-                        goToExternalUrl(
-                          'https://form.jotform.com/230302121540333'
+                        window.open(
+                          'https://www.helloasso.com/associations/garage-isep/evenements/silicondays-2024',
+                          '_blank'
                         )
                       }
                       className="w-2/3 max-[400px]:w-3/4 sm:w-auto bg-blue-600 hover:bg-blue-700 mr-5 mb-2"

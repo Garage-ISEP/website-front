@@ -80,7 +80,7 @@ const SiliconDays = () => {
               <CustomButton
                 onClick={() =>
                   window.open(
-                    'https://form.jotform.com/230302121540333',
+                    'https://www.helloasso.com/associations/garage-isep/evenements/silicondays-2024',
                     '_blank'
                   )
                 }
