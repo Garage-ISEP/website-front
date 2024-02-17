@@ -7,6 +7,8 @@ import { ApparitionAnimation } from '../Animations/ApparitionAnimation/Apparitio
 
 export const HeroSection = () => {
   const { goToPath, goToExternalUrl } = useContext(GlobalContext);
+  const year = new Date().getFullYear();
+
   return (
     <section className="w-full tails-selected-element mt-2 sm:mt-4">
       <div className="relative h-auto pb-45 sm:pb-48 md:pb-56">
@@ -48,7 +50,7 @@ export const HeroSection = () => {
                 d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
               ></path>
             </svg>
-            <span className="">Garage ISEP 2022/2023 - Innovation Hub</span>
+            <span className="">Garage ISEP {year} - Innovation Hub</span>
           </p>
           <ApparitionAnimation classNames="container relative max-w-3xl mx-auto lg:mt-2 2xl:mt-0 md:mt-1.5">
             <Image
@@ -79,9 +81,10 @@ export const HeroSection = () => {
                   </div>
                 </div>
                 <div className="px-5 pt-0 sm:pt-1 pb-5  sm:mb-0 md:pt-1 sm:m-0">
-                  <p className="">$ sudo silicon_days_2023</p>
+                  <p className="">$ sudo silicon_days_{year}</p>
                   <p className="mt-1 sm:mt-4">
-                    Silicon Days [Version 1.0]<br></br>2023 Garage ISEP<br></br>{' '}
+                    Silicon Days [Version 1.0]<br></br>
+                    {year} Garage ISEP<br></br>{' '}
                   </p>
                   <p className="">
                     <br></br>Loading ideas...Ready to Deploy 🚀

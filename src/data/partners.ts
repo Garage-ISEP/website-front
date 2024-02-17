@@ -5,21 +5,21 @@ export interface PartnersModel {
 }
 
 export const partners: PartnersModel[] = [
-  {
+  /* {
     id: 0,
     image: 'PBW_Talent_Marine.svg',
     alt: 'Paris Blockchain Week - 20 Mars 2023',
-  },
+  }, */
   {
     id: 1,
     image: 'IBM_logo.png',
     alt: 'IBM',
   },
-  {
+  /* {
     id: 2,
     image: 'Ledger_logo.png',
     alt: 'Ledger',
-  },
+  }, */
   {
     id: 3,
     image: 'ISEP_A.png',
@@ -30,9 +30,19 @@ export const partners: PartnersModel[] = [
     image: 'Capgemini_logo.png',
     alt: 'Capgemini',
   },
-  {
+  /*   {
     id: 5,
     image: 'Vivatech_logo.png',
     alt: 'ISEP Alumni',
+  }, */
+  {
+    id: 6,
+    image: 'airbus.png',
+    alt: 'Airbus',
+  },
+  {
+    id: 7,
+    image: 'issy.png',
+    alt: 'Issy Les Moulineaux',
   },
 ];

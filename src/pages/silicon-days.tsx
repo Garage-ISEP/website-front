@@ -39,8 +39,8 @@ const SiliconDays = () => {
           <SiliconShape name={'shape1'} left={false} valueTop={'top-[-80px]'} />
           <SiliconShape name={'shape3'} left={false} valueTop={'top-[770px]'} />
           <SiliconShape name={'shape2'} left={true} valueTop={'top-[100px]'} />
-          <SiliconShape name={'shape4'} left={true} valueTop={'top-[950px]'} />
-
+          {/*           <SiliconShape name={'shape4'} left={true} valueTop={'top-[950px]'} />
+           */}
           <div className="sm:mx-4 lg:mx-20 xl:mx-10 2xl:mx-20 grid place-items-center ">
             <Header
               logo={'/g-logo-h-w.svg'}
@@ -58,7 +58,7 @@ const SiliconDays = () => {
                 className="mt-4 sm:mt- w-8/12 sm:w-1/4	"
               ></Image>
               <h2 className="text-center text-2xl sm:text-3xl font-bold text-white drop-shadow-lg shadow-black mt-4">
-                24 mars 2023
+                28 mars 2024
               </h2>
               <a href="https://garageisep.com" target="_blank" rel="noreferrer">
                 <Image
@@ -74,8 +74,8 @@ const SiliconDays = () => {
               </h2>
               <p className="text-center font-bold text-white text-base sm:text-lg w-10/12 sm:w-4/5 xl:w-2/5">
                 {isMobile
-                  ? 'Vous êtes passionnés de technologie et souhaitez relever des défis innovants ? Rejoignez-nous aux prochains Silicon Days, un hackathon sur le thème de la "Tech for Good" organisé par Garage Isep !'
-                  : 'Vous êtes passionnés de technologie et souhaitez relever des défis innovants ? Rejoignez-nous aux prochains Silicon Days, un hackathon organisé par Garage Isep ! Le thème de cette édition est "Tech for Good", vous permettant ainsi de découvrir aux côtés d\'enterprises innovantes les dernières tendances en matière de technologie pour accélérer la transition vers une société plus durable et responsable.'}
+                  ? 'Vous êtes passionnés de technologie et souhaitez relever des défis innovants ? Rejoignez-nous aux prochains Silicon Days, un hackathon sur le thème "Technologie et société" organisé par Garage Isep !'
+                  : 'Vous êtes passionnés de technologie et souhaitez relever des défis innovants ? Rejoignez-nous aux prochains Silicon Days, un hackathon organisé par Garage Isep ! Le thème de cette édition est "Technologie et société", vous permettant ainsi de découvrir aux côtés d\'enterprises innovantes les dernières tendances en matière de technologie pour accélérer la transition vers une société plus durable et responsable.'}
               </p>
               <CustomButton
                 onClick={() =>
@@ -91,7 +91,7 @@ const SiliconDays = () => {
             </ApparitionAnimation>
             <hr className="w-4/5 lg:w-3/5 xl:w-1/2 2xl:w-2/5 h-px h-1 my-8 bg-white border-0 rounded md:my-12" />
             {/* TODO : Caroussel pour la version mobile */}
-            {siliconSubThemes.map((o: SiliconSubThemesModel) => (
+            {/* {siliconSubThemes.map((o: SiliconSubThemesModel) => (
               <SiliconAdvantage
                 name={o.name}
                 description={o.description}
@@ -100,8 +100,9 @@ const SiliconDays = () => {
                 key={o.id}
                 company={o.company}
               />
-            ))}
-            <hr className="w-4/5 lg:w-3/5 xl:w-1/2 2xl:w-2/5 h-px h-1 bg-white border-0 rounded " />
+            ))} */}
+            <p className="text-lg font-bold mb-8">Plus de détails à venir...</p>
+            {/* <hr className="w-4/5 lg:w-3/5 xl:w-1/2 2xl:w-2/5 h-px h-1 bg-white border-0 rounded " />
             <h2 className=" mt-10 text-left mb-12 text-2xl font-bold">
               <span className="flex items-center">
                 Agenda{' '}
@@ -120,7 +121,7 @@ const SiliconDays = () => {
                 description={o.description}
                 key={o.id}
               />
-            ))}{' '}
+            ))}{' '} */}
           </div>
 
           <div className="grid place-items-center mt-5">
