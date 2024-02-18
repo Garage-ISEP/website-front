@@ -67,7 +67,7 @@ export const HeroSection = () => {
             <p className="mt-3 sm:mt-6 text-sm sm:text-base  text-pink-100 2xl:text-lg 2xl:font-bold 2xl:text-white sm:text-white sm:font-extrabold xl:font-semibold md:font-semibold">
               Vous êtes passionné·e·s de technologie et souhaitez relever des
               défis innovants ? Rejoignez-nous aux prochains Silicon Days, un
-              hackathon organisé par le Garage ISEP Innovation Hub !
+              hackathon organisé par Garage ISEP Innovation Hub !
             </p>
           </ApparitionAnimation>
           <div className="relative flex justify-center max-w-3xl mx-auto mt-6 sm:mt-10 pb-20 sm:pb-0">
