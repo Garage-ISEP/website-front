@@ -58,7 +58,7 @@ const SiliconDays = () => {
                 className="mt-4 sm:mt- w-8/12 sm:w-1/4	"
               ></Image>
               <h2 className="text-center text-2xl sm:text-3xl font-bold text-white drop-shadow-lg shadow-black mt-4">
-                28 mars 2024
+                Du 11 au 28 mars 2024
               </h2>
               <a href="https://garageisep.com" target="_blank" rel="noreferrer">
                 <Image
