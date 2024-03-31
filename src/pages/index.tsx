@@ -4,8 +4,7 @@ import { GarageNumberSection } from '@/components/NumberSection/NumberSection';
 import { HeroSection } from '@/components/HeroSection/HeroSection';
 import Head from 'next/head';
 import { GaragePartnersSection } from '@/components/PartnersSection/PartnersSection';
-import { AffichageLabs } from '@/components/labs/lab';
-
+import { LabsSection } from '@/components/LabSection/LabSection';
 
 interface Props {
   labs: any;
@@ -25,15 +24,15 @@ export default function Home({ labs, partners, numbers }: Props) {
         <HeroSection />
         <GarageSection />
         <GarageNumberSection />
-        <AffichageLabs/>
+        <LabsSection />
         <ContactSection />
         <GaragePartnersSection />
-        
       </>
     </>
-  )
+  );
 }
-{/*
+{
+  /*
 export async function getServerSideProps() {
   try {
     let responseLabs = await fetch(
@@ -63,4 +62,5 @@ export async function getServerSideProps() {
     return { props: e };
   }
 }
-*/}
+*/
+}
