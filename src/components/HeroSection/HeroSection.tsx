@@ -83,7 +83,7 @@ export const HeroSection = () => {
                 <div className="px-5 pt-0 sm:pt-1 pb-5  sm:mb-0 md:pt-1 sm:m-0">
                   <p className="">$ sudo silicon_days_{year}</p>
                   <p className="mt-1 sm:mt-4">
-                    Silicon Days [Version 1.0]<br></br>
+                    Silicon Days [Version 2.0]<br></br>
                     {year} Garage ISEP<br></br>{' '}
                   </p>
                   <p className="">
